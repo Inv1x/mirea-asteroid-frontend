@@ -41,7 +41,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="sticky flex justify-center top-0 z-50 w-full border-b border-fuchsia-500 bg-gradient-to-r from-blue-600 via-violet-500 to-fuchsia-600 text-white">
+    <header className="sticky flex justify-center top-0 z-50 w-full bg-gradient-to-r from-blue-600 via-violet-500 to-fuchsia-600 text-white">
       <div className="container flex h-16 items-center justify-between not-lg:mx-8">
         {/* Логотип - видно на всех экранах */}
         <div className="flex items-center">
