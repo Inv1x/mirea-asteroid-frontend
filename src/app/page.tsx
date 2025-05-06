@@ -22,7 +22,7 @@ export default function EducationalPlatform() {
                   Откройте для себя мир космоса с нашей образовательной платформой. Учитесь в удобном для вас темпе благодаря курсам и интерактивному контенту
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <div className="flex flex-col gap-2 min-lg:flex-row">
                 <Button
                   asChild
                   size="lg"
@@ -34,7 +34,7 @@ export default function EducationalPlatform() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-transparent hover:border-blue-300 dark:border-blue-800 dark:hover:border-blue-700"
+                  className="border-transparent hover:border-blue-300 dark:border-blue-800 dark:hover:border-blue-700 dark:text-slate-300"
                 >
                   <Link href="/signup">Бесплатная регистрация</Link>
                 </Button>
