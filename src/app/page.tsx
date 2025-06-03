@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar"
 import { FeatureCard } from "@/components/feature-card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -54,11 +53,9 @@ export const metadata: Metadata = {
 
 export default function EducationalPlatform() {
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-50 to-fuchsia-50 dark:from-slate-900 dark:to-slate-800">
-      <Navbar />
-
+    <div className="bg-gradient-to-b from-blue-50 to-fuchsia-50 dark:from-slate-900 dark:to-slate-800">
       {/* Главный Блок (Hero Section) */}
-      <section className="flex-1 flex flex-col items-center justify-center px-4 py-12 md:py-12 lg:py-12">
+      <section className="flex flex-col items-center justify-center px-4 py-12 md:py-12 lg:py-12">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
