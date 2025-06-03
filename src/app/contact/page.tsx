@@ -4,29 +4,9 @@ import { Mail, Github, GraduationCap, Users, MessageCircle, MapPin } from "lucid
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { authors } from "@/mocks/authors"
 
 export default function ContactPage() {
-  const authors = [
-    {
-      name: "Ульяна Фролова",
-      role: "Соосновательница и ведущий разработчик",
-      description: "Специалист по фронтенд-разработке и UI/UX дизайну. Отвечает за пользовательский интерфейс и опыт взаимодействия с платформой.",
-      avatar: "/avatars/uliana.jpg",
-      email: "ulyana@asteroid.edu",
-      github: "Uliana-hash",
-      specialization: ["Frontend", "UI/UX", "React", "TypeScript"]
-    },
-    {
-      name: "Денис Ширяев",
-      role: "Сооснователь и технический директор",
-      description: "Эксперт в области бэкенд-разработки и архитектуры систем. Руководит технической стороной проекта и разработкой образовательного контента.",
-      avatar: "/avatars/denis.jpg",
-      email: "denis@asteroid.edu",
-      github: "TrIIfa",
-      specialization: ["Backend", "DevOps", "Python", "Архитектура"]
-    }
-  ]
-
   return (
     <div className="bg-gradient-to-b from-blue-50 to-fuchsia-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 py-8">

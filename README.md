@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌠 Asteroid Frontend
 
-## Getting Started
+**Asteroid Frontend** — это современный, адаптивный интерфейс для образовательной платформы Asteroid, разработанный с использованием Next.js, TypeScript, React и Tailwind CSS. Проект демонстрирует профили команды, контактную информацию и предоставляет пользователям удобный интерфейс для знакомства и взаимодействия с проектом Asteroid.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Основные возможности
+
+* Динамическая страница «Наша команда» с реальными аватарами и иконками-заполнителями.
+* Контактные формы и ссылки для связи по общим и техническим вопросам.
+* Адаптивный дизайн с поддержкой тёмной темы.
+* Переиспользуемые UI-компоненты: карточки, бейджи, кнопки.
+* Обработка ошибок при загрузке аватаров с заменой на иконку `GraduationCap`.
+* Интерфейс страницы курсов (`/courses`).
+* Страницы регистрации и входа.
+
+---
+
+## 🛠️ Технологии
+
+* Next.js (App Router)
+* React и TypeScript
+* Tailwind CSS
+* Lucide React Icons
+* shadcn/ui
+* Развёртывание на Vercel
+
+---
+
+## 📁 Структура проекта
+
+```
+src/
+├─ app/
+│  └─ page.tsx          — Главная страница
+├─ components/ui/       — Общие UI-компоненты (Card, Button, Badge и др.)
+├─ styles/              — Глобальные стили и конфигурация Tailwind
+└─ ...
+
+public/
+├─ avatars/             — Изображения профилей участников
+├─ favicon.ico          
+└─ logotype.png
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Настройка и запуск
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Клонируйте репозиторий:
 
-## Learn More
+   ```bash
+   git clone https://github.com/Inv1x/mirea-asteroid-frontend.git
+   cd mirea-asteroid-frontend
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Установите зависимости:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Запустите сервер разработки:
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Соберите проект для продакшена:
+
+   ```bash
+   npm run build
+   ```
+
+5. Предпросмотр продакшен-сборки:
+
+   ```bash
+   npm run start
+   ```
+
+---
+
+## 🖼️ Публичные ресурсы
+
+* Разместите аватары команды в папке `public/avatars/` (например, `public/avatars/ulyana.jpg` или `.png`).
+* Стандартный favicon и логотип находятся в папке `public/`.
+
+---
+
+## 🛠️ Кастомизация
+
+* Измените список участников в файле `src/app/contact/page.tsx`.
+* Настройте тему Tailwind в `tailwind.config.js`.
+* Обновите глобальные метаданные в `src/app/layout.tsx`.
+
+---
+
+## 🚀 Развёртывание
+
+Проект оптимизирован для развёртывания на платформе Vercel. При пуше в основную ветку происходит автоматическое развёртывание. Подробнее см. в [документации Next.js по развёртыванию](https://nextjs.org/docs/app/building-your-application/deploying).
+
+---
+
+##
