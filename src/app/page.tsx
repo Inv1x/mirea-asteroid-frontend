@@ -3,6 +3,54 @@ import { FeatureCard } from "@/components/feature-card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { BookOpen, GraduationCap, FileText, Video } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Asteroid - Образовательная платформа по космосу и астрономии",
+  description: "Откройте для себя мир космоса с нашей образовательной платформой. Изучайте астрономию, физику космоса и космические технологии в удобном темпе с экспертными курсами.",
+  keywords: ["астрономия", "космос", "образование", "курсы", "физика", "планетология", "астрофизика", "космические технологии", "обучение"],
+  authors: [{ name: "Asteroid Education Team" }],
+  creator: "Asteroid",
+  publisher: "Asteroid",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    url: "https://asteroid.edu",
+    title: "Asteroid - Образовательная платформа по космосу и астрономии",
+    description: "Откройте для себя мир космоса с нашей образовательной платформой. Изучайте астрономию, физику космоса и космические технологии.",
+    siteName: "Asteroid",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Asteroid - Образовательная платформа по космосу",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Asteroid - Образовательная платформа по космосу и астрономии",
+    description: "Откройте для себя мир космоса с нашей образовательной платформой. Изучайте астрономию, физику космоса и космические технологии.",
+    images: ["/og-image.jpg"],
+    creator: "@asteroid_edu",
+  },
+  alternates: {
+    canonical: "https://asteroid.edu",
+  },
+  category: "education",
+}
 
 export default function EducationalPlatform() {
   return (
@@ -28,7 +76,7 @@ export default function EducationalPlatform() {
                   size="lg"
                   className="bg-gradient-to-r from-blue-600 via-violet-500 to-fuchsia-600 hover:from-blue-700 hover:via-violet-700 hover:to-fuchsia-700 text-white border-0"
                 >
-                  <Link href="/explore">Изучить курсы</Link>
+                  <Link href="/courses">Изучить курсы</Link>
                 </Button>
                 <Button
                   asChild
