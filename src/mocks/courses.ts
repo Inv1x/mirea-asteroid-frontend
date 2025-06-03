@@ -9,7 +9,7 @@ export interface Course {
   level: "Начинающий" | "Средний" | "Продвинутый" | "Эксперт"
   category: "Астрономия" | "Физика" | "Планетология" | "Технологии" | "История" | "Астрофизика"
   image: string
-  price: string
+  isPremium: boolean
 }
 
 export const mockCourses: Course[] = [
@@ -25,7 +25,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "Бесплатно"
+    isPremium: false
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "₽1,990"
+    isPremium: false
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "₽2,990"
+    isPremium: true
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "₽1,490"
+    isPremium: false
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "₽2,490"
+    isPremium: false
   },
   {
     id: 6,
@@ -90,7 +90,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "₽3,990"
+    isPremium: true
   },
   {
     id: 7,
@@ -103,7 +103,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "Бесплатно"
+    isPremium: false
   },
   {
     id: 8,
@@ -116,7 +116,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Астрономия",
     image: "/api/placeholder/300/200",
-    price: "₽2,790"
+    isPremium: false
   },
 
   // Физика
@@ -131,7 +131,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽2,990"
+    isPremium: true
   },
   {
     id: 10,
@@ -144,7 +144,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽4,490"
+    isPremium: true
   },
   {
     id: 11,
@@ -157,7 +157,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽2,590"
+    isPremium: false
   },
   {
     id: 12,
@@ -170,7 +170,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽1,990"
+    isPremium: false
   },
   {
     id: 13,
@@ -183,7 +183,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽3,790"
+    isPremium: true
   },
   {
     id: 14,
@@ -196,7 +196,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽2,290"
+    isPremium: false
   },
   {
     id: 15,
@@ -209,7 +209,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽3,990"
+    isPremium: true
   },
   {
     id: 16,
@@ -222,7 +222,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Физика",
     image: "/api/placeholder/300/200",
-    price: "₽1,490"
+    isPremium: false
   },
 
   // Планетология
@@ -237,7 +237,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Планетология",
     image: "/api/placeholder/300/200",
-    price: "₽1,990"
+    isPremium: false
   },
   {
     id: 18,
@@ -250,7 +250,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Планетология",
     image: "/api/placeholder/300/200",
-    price: "₽2,490"
+    isPremium: false
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Планетология",
     image: "/api/placeholder/300/200",
-    price: "₽2,190"
+    isPremium: false
   },
   {
     id: 20,
@@ -276,7 +276,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Планетология",
     image: "/api/placeholder/300/200",
-    price: "₽1,890"
+    isPremium: false
   },
   {
     id: 21,
@@ -289,7 +289,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Планетология",
     image: "/api/placeholder/300/200",
-    price: "₽1,290"
+    isPremium: false
   },
   {
     id: 22,
@@ -302,7 +302,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Планетология",
     image: "/api/placeholder/300/200",
-    price: "₽2,090"
+    isPremium: false
   },
 
   // Технологии
@@ -317,7 +317,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽3,490"
+    isPremium: false
   },
   {
     id: 24,
@@ -330,7 +330,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽4,990"
+    isPremium: true
   },
   {
     id: 25,
@@ -343,7 +343,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽2,890"
+    isPremium: false
   },
   {
     id: 26,
@@ -356,7 +356,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽3,790"
+    isPremium: false
   },
   {
     id: 27,
@@ -369,7 +369,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽1,990"
+    isPremium: false
   },
   {
     id: 28,
@@ -382,7 +382,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽2,690"
+    isPremium: false
   },
   {
     id: 29,
@@ -395,7 +395,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽3,590"
+    isPremium: false
   },
   {
     id: 30,
@@ -408,7 +408,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽1,690"
+    isPremium: false
   },
   {
     id: 31,
@@ -421,7 +421,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽3,190"
+    isPremium: false
   },
   {
     id: 32,
@@ -434,7 +434,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽2,390"
+    isPremium: false
   },
   {
     id: 33,
@@ -447,7 +447,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽2,890"
+    isPremium: false
   },
   {
     id: 34,
@@ -460,7 +460,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽2,790"
+    isPremium: false
   },
   {
     id: 35,
@@ -473,7 +473,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽4,290"
+    isPremium: true
   },
   {
     id: 36,
@@ -486,7 +486,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽1,890"
+    isPremium: false
   },
   {
     id: 37,
@@ -499,7 +499,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Технологии",
     image: "/api/placeholder/300/200",
-    price: "₽3,090"
+    isPremium: false
   },
 
   // История
@@ -514,7 +514,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "История",
     image: "/api/placeholder/300/200",
-    price: "Бесплатно"
+    isPremium: false
   },
   {
     id: 39,
@@ -527,7 +527,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "История",
     image: "/api/placeholder/300/200",
-    price: "₽1,490"
+    isPremium: false
   },
   {
     id: 40,
@@ -540,7 +540,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "История",
     image: "/api/placeholder/300/200",
-    price: "₽1,890"
+    isPremium: false
   },
   {
     id: 41,
@@ -553,7 +553,7 @@ export const mockCourses: Course[] = [
     level: "Начинающий",
     category: "История",
     image: "/api/placeholder/300/200",
-    price: "Бесплатно"
+    isPremium: false
   },
   {
     id: 42,
@@ -566,7 +566,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "История",
     image: "/api/placeholder/300/200",
-    price: "₽2,190"
+    isPremium: false
   },
   {
     id: 43,
@@ -579,7 +579,7 @@ export const mockCourses: Course[] = [
     level: "Средний",
     category: "История",
     image: "/api/placeholder/300/200",
-    price: "₽1,690"
+    isPremium: false
   },
 
   // Астрофизика
@@ -594,7 +594,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽4,990"
+    isPremium: true
   },
   {
     id: 45,
@@ -607,7 +607,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽4,490"
+    isPremium: true
   },
   {
     id: 46,
@@ -620,7 +620,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽3,990"
+    isPremium: false
   },
   {
     id: 47,
@@ -633,7 +633,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽5,490"
+    isPremium: true
   },
   {
     id: 48,
@@ -646,7 +646,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽3,290"
+    isPremium: false
   },
   {
     id: 49,
@@ -659,7 +659,7 @@ export const mockCourses: Course[] = [
     level: "Эксперт",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽4,190"
+    isPremium: false
   },
   {
     id: 50,
@@ -672,7 +672,7 @@ export const mockCourses: Course[] = [
     level: "Продвинутый",
     category: "Астрофизика",
     image: "/api/placeholder/300/200",
-    price: "₽3,590"
+    isPremium: false
   }
 ]
 

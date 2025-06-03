@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { Search, Star, Clock, Users, BookOpen, Rocket, Globe, Atom } from "lucide-react"
+import { Search, Star, Clock, Users, BookOpen, Rocket, Globe, Atom, Crown } from "lucide-react"
 import { mockCourses, categories as mockCategories, Course } from "@/mocks/courses"
 
 export default function CoursesPage() {
@@ -154,9 +154,12 @@ export default function CoursesPage() {
                   <Badge className={getLevelColor(course.level)}>
                     {course.level}
                   </Badge>
-                  <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-                    {course.price}
-                  </span>
+                  {course.isPremium && (
+                    <div className="flex items-center gap-1 text-sm font-semibold text-amber-600 dark:text-amber-400">
+                      <Crown className="w-4 h-4" />
+                      Premium
+                    </div>
+                  )}
                 </div>
                 <CardTitle className="text-lg leading-tight text-slate-900 dark:text-slate-100">{course.title}</CardTitle>
                 <CardDescription className="text-sm line-clamp-2 text-slate-600 dark:text-slate-400">
@@ -186,11 +189,20 @@ export default function CoursesPage() {
               </CardContent>
               
               <CardFooter className="pt-0">
-                <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-fuchsia-600 hover:from-blue-700 hover:to-fuchsia-700 text-white">
-                  <Link href={`/courses/${course.id}`}>
-                    Просмотреть курс
-                  </Link>
-                </Button>
+                {course.isPremium ? (
+                  <Button asChild className="w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-600 hover:to-yellow-600 text-white">
+                    <Link href={`/courses/${course.id}`}>
+                      <Crown className="w-4 h-4 mr-2" />
+                      Премиум курс
+                    </Link>
+                  </Button>
+                ) : (
+                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-fuchsia-600 hover:from-blue-700 hover:to-fuchsia-700 text-white">
+                    <Link href={`/courses/${course.id}`}>
+                      Просмотреть курс
+                    </Link>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}

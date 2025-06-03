@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { BookOpen, GraduationCap, Menu, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -46,7 +47,13 @@ export function Navbar() {
         {/* Логотип - видно на всех экранах */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <GraduationCap className="h-6 w-6" />
+            <Image
+              src="/logotype.png"
+              alt="Asteroid Logo"
+              width={64}
+              height={64}
+              className="w-8 h-8"
+            />
             <span className="font-bold text-xl">Asteroid</span>
           </Link>
         </div>

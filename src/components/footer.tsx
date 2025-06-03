@@ -1,5 +1,5 @@
+import Image from "next/image"
 import Link from "next/link"
-import { GraduationCap } from "lucide-react"
 
 export function Footer() {
   return (
@@ -9,7 +9,13 @@ export function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <GraduationCap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+              <Image
+                src="/logotype.png"
+                alt="Asteroid Logo"
+                width={64}
+                height={64}
+                className="w-8 h-8"
+              />
               <span className="font-bold text-xl text-slate-900 dark:text-slate-100">Asteroid</span>
             </div>
             <p className="text-slate-600 dark:text-slate-400 mb-4 max-w-md">

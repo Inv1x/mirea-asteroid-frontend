@@ -1,8 +1,9 @@
+import { Metadata } from "next"
+import Link from "next/link"
+import Image from "next/image"
+import { BookOpen, FileText, Video } from "lucide-react"
 import { FeatureCard } from "@/components/feature-card"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { BookOpen, GraduationCap, FileText, Video } from "lucide-react"
-import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Asteroid - Образовательная платформа по космосу и астрономии",
@@ -67,7 +68,7 @@ export default function EducationalPlatform() {
                   Откройте для себя мир космоса с нашей образовательной платформой. Учитесь в удобном для вас темпе благодаря курсам и интерактивному контенту
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-lg:flex-row">
+              <div className="flex flex-col gap-2 min-lg:flex-row z-10">
                 <Button
                   asChild
                   size="lg"
@@ -79,7 +80,7 @@ export default function EducationalPlatform() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-transparent hover:border-blue-300 dark:border-blue-800 dark:hover:border-blue-700 dark:text-slate-300"
+                  className="border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-50/80 dark:hover:bg-slate-700/80 backdrop-blur-sm"
                 >
                   <Link href="/signup">Бесплатная регистрация</Link>
                 </Button>
@@ -87,8 +88,14 @@ export default function EducationalPlatform() {
             </div>
             <div className="relative flex items-center justify-center">
               <div className="relative w-full max-w-4xl">
-                <div className="absolute inset-0 flex items-center justify-center text-8xl sm:text-9xl opacity-60 z-0">
-                  <GraduationCap className="w-32 h-32 text-blue-500/30" />
+                <div className="absolute inset-0 flex items-center justify-center text-8xl sm:text-9xl z-0">
+                  <Image
+                    src="/logotype.png"
+                    alt="Asteroid Logo"
+                    width={512}
+                    height={512}
+                    className="w-80 h-80 opacity-60 lg:opacity-100"
+                  />
                 </div>
               </div>
               <div className="absolute -z-10 h-full w-full bg-gradient-to-b from-blue-500/10 to-fuchsia-500/10 blur-2xl" />
